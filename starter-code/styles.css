@@ -1,0 +1,251 @@
+/* || Typography */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;700&display=swap");
+
+/* || General styles */
+:root {
+  --teal: #66e2dc;
+  --orange: #fa7453;
+  --light-orange: #ffb964;
+  --white: #fcfaf9;
+  --black: #191826;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-size: 20px;
+  line-height: 34px;
+  color: var(--black);
+  background: var(--white);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 88px;
+  line-height: 88px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: bold;
+}
+
+/* || Buttons */
+.btn {
+  background: var(--black);
+  color: var(--white);
+  display: block;
+  min-height: 60px;
+  width: 100%;
+  padding: 20px 50px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.7s;
+  margin: 0 auto;
+}
+
+.btn-apple:hover {
+  background: var(--white);
+  color: var(--black);
+  transition: 0.7s;
+}
+
+.btn-android {
+  background: var(--white);
+  color: var(--black);
+  transition: 0.7s;
+}
+
+.btn-android:hover {
+  background: var(--black);
+  color: var(--white);
+  transition: 0.7s;
+}
+
+/* || Loader */
+#loading-screen {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  background-color: white;
+}
+
+.loading-icon {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid black;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: loaderSpin 1.2s linear infinite;
+  z-index: 100;
+}
+
+/* || Small Devices */
+.logo {
+  display: block;
+  margin: 30px 0 65px 30px;
+}
+
+.mobile-bg {
+  position: absolute;
+  top: -250px;
+  right: -120px;
+  height: 70%;
+}
+
+.tablet-bg,
+.desktop-bg,
+.bg-pattern-1 {
+  display: none;
+}
+
+/* || Main */
+main {
+  padding: 25px;
+  margin-bottom: 120px;
+}
+
+main h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 20px;
+}
+
+/* || CTA */
+.image-card {
+  border-radius: 15px;
+  padding: 0px 40px;
+  background: var(--black);
+}
+
+.bg-pattern-2 {
+  position: absolute;
+  width: 90%;
+  z-index: 0;
+}
+
+.illustration-app {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+}
+
+.cta-content {
+  border-radius: 15px;
+  padding: 50px 25px;
+  background: var(--orange);
+  position: relative;
+  top: -25px;
+  color: var(--white);
+}
+
+.cta-content h2 {
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  margin-bottom: 20px;
+}
+
+.cta-content h3 {
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.cta-content h3 span {
+  font-size: 20px;
+  font-weight: normal;
+  margin-left: 15px;
+}
+
+.cta-content .btn {
+  margin: 20px auto;
+}
+
+/* || Footer */
+footer {
+  padding: 65px 25px;
+}
+
+footer img {
+  margin-bottom: 30px;
+}
+
+footer p span {
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  margin: 65px auto 0px auto;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  text-decoration: none;
+}
+
+footer ul li a img {
+  margin-right: 20px;
+  width: 25px;
+}
+
+/* || Large Devices */
+@media (min-width: 500px) {
+  .illustration-app {
+    width: 45%;
+  }
+
+  .bg-pattern-2 {
+    width: 60%;
+    left: 20%;
+  }
+
+  .cta-content {
+    padding: 50px 125px;
+  }
+}
+
+/* || Animations */
+@keyframes loaderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

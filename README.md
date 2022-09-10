@@ -23,11 +23,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./preview.jpg)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://equalizer-landing-page-demo.netlify.app/)
+- Live Site URL: [Equalizer Landing Page](https://equalizer-landing-page-demo.netlify.app/)
 
 ## My process
 
@@ -41,4 +41,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.brendenevans.com)
+- Website - [Brenden Evans](https://www.brendenevans.com)

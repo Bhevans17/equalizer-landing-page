@@ -22,6 +22,7 @@ body {
   line-height: 34px;
   color: var(--black);
   background: var(--white);
+  height: 100%:
 }
 
 img {
@@ -47,17 +48,18 @@ h2 {
   background: var(--black);
   color: var(--white);
   display: block;
-  min-height: 60px;
+  min-height: 61px;
   width: 100%;
-  padding: 20px 50px;
-  font-size: 16px;
+  padding: 15px 50px;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 14px;
+  line-height: 25px;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.7s;
   margin: 0 auto;
+  max-width: 296px;
 }
 
 .btn-apple:hover {
@@ -78,7 +80,6 @@ h2 {
   transition: 0.7s;
 }
 
-/* || Loader */
 #loading-screen {
   width: 100%;
   height: 100%;
@@ -90,7 +91,7 @@ h2 {
   justify-content: center;
   z-index: 99;
   background-color: white;
-}
+} 
 
 .loading-icon {
   border: 5px solid #f3f3f3;
@@ -102,29 +103,50 @@ h2 {
   z-index: 100;
 }
 
-.logo {
-  display: block;
-  margin: 30px 0 65px 30px;
-}
-
-.mobile-bg {
+.page-container::after {
+  content: "";
+  width: 381.4px;
+  height: 520px;
+  background-image: url("assets/bg-main-mobile.png");
+  background-size: cover;
+  background-position: 20% 60%;
   position: absolute;
-  height: 100%;
-  top: -33%;
-  right: -35%;
+  right: -110px;
+  top: -144px;
   z-index: -1;
 }
 
-.tablet-bg,
-.desktop-bg,
-.bg-pattern-1 {
-  display: none;
+@media only screen and (min-width: 768px) {
+  .page-container::after {
+    background-image: url("assets/bg-main-tablet.png");
+    background-repeat: none;
+    background-position: 80% 60%;
+    right: -30px;
+    top: -144px;
+    width: 983px;
+    height: 908px;
+  }
 }
 
-/* || Main */
+@media only screen and (min-width: 1440px) {
+  .page-container::after {
+    width: 1813px;
+    right: -150px;
+    top: -144px;
+    background-position: 135% 60%;
+    height: 1758px;
+    background-image: url("assets/bg-main-desktop.png");
+  }
+}
+
+.logo {
+  display: block;
+  width: 146px;
+  padding: 40px 0 64px 24px;
+}
+
 main {
   padding: 25px;
-  margin-bottom: 120px;
 }
 
 main h1 {
@@ -136,61 +158,90 @@ main p {
   font-size: 16px;
   line-height: 26px;
   margin-top: 20px;
+  margin-bottom: 68px;
+}
+
+.pattern-1 {
+  display: none;
 }
 
 /* || CTA */
-.cta-image-card {
+.cta {
   position: relative;
   background: var(--black);
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 100px;
 }
 
-.bg-pattern-2 {
-  display: block;
-  margin: 0 auto;
-}
-
-.illustration-app {
-  display: block;
-  margin: 0 auto;
-  width: 60%;
+.iphone-img {
+  width: 208px;
   position: absolute;
-  top: -25%;
-  left: 20%;
+  top: -120px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.pattern-2 {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 420px;
 }
 
 .cta-card {
-  border-radius: 15px;
+  border-radius: 12px;
   background: var(--orange);
   color: var(--white);
-  padding: 60px 30px;
-  transform: translateY(-20px);
+  padding: 48px 36px;
+}
+
+.cta-card h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.cta-card p {
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .cta-card h3 {
   font-size: 65px;
-  margin: 30px auto;
+  margin: 36px auto;
+  display: flex;
+  align-items: center;
 }
 
 .cta-card h3 span {
   font-size: 20px;
   font-weight: normal;
+  margin-left: 16px;
 }
 
 .cta-card .btn-apple {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 /* || Footer */
 footer {
-  padding: 65px 25px;
+  padding: 64px 24px;
 }
 
-footer img {
-  margin-bottom: 30px;
+.footer-logo {
+  margin-bottom: 32px;
 }
 
-footer p span {
+footer p a {
+  color: var(--black);
   font-weight: bold;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  color: var(--orange);
 }
 
 footer ul {
@@ -213,96 +264,87 @@ footer ul li a {
     brightness(98%) contrast(98%);
 }
 
-/* || Small Devices */
-@media (min-width: 450px) {
-  .illustration-app {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    position: absolute;
-    top: -25%;
-    left: 25%;
-  }
-}
-
-@media (min-width: 550px) {
-  .illustration-app {
-    width: 35%;
-    top: -20%;
-    left: 30%;
-  }
-
-  .bg-pattern-2 {
-    width: 55%;
-  }
-}
-
 /* || Medium Devices */
 @media (min-width: 768px) {
-  .mobile-bg {
-    display: none;
-  }
-
-  .tablet-bg {
+  .pattern-1 {
     display: block;
     position: absolute;
-    top: -25%;
-    left: -13%;
-    height: 100%;
-    z-index: -1;
+    top: -32px;
+    right: -33px;
+    max-height: 400px;
+    max-width: 267px;
   }
 
-  .bg-pattern-1 {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 30%;
-  }
-
-  .cta-image-card {
-    width: 100%;
-    border-radius: 15px;
-  }
-
-  .cta-image-card .illustration-app {
-    width: 30%;
-    top: -15%;
-    left: 10%;
-  }
-
-  .cta-card {
-    border-radius: 15px;
-    background: var(--orange);
-    color: var(--white);
-    padding: 60px 30px;
-    width: 50%;
-    position: absolute;
-    right: 4%;
-    top: 80%;
+  main {
+    margin-bottom: 160px;
   }
 
   main h1 {
     font-size: 64px;
     line-height: 64px;
-    max-width: 55%;
+    max-width: 520px;
   }
 
   main p {
-    font-size: 16px;
-    max-width: 65%;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 514px;
   }
 
+  .iphone-img {
+    position: absolute;
+    height: 556px;
+    width: 270px;
+    top: -150px;
+    right: 50%;
+    z-index: 1;
+  }
+  
   .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 92%;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .cta-card {
+    position: absolute;
+    top: 25%;
+    right: 60px;
+    width: 399px;
+    height: 546px;
+    padding: 50px;
+    z-index: 2;
+  }
+
+  .pattern-2 {
+    display: block;
+    height: 420px;
+    width: 280px;
+    position: absolute;
+    top: -50px;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
 
   footer {
-    margin-top: 200px;
+    margin-top: 87px;
+    padding-left: 33px;
     display: flex;
     justify-content: space-between;
+  }
+
+  .footer-logo {
+    width: 149px;
+  }
+
+  .footer-content p {
+    font-size: 16px;
+    line-height: 26px;
+    width: 366px;
   }
 
   footer ul {
@@ -311,88 +353,87 @@ footer ul li a {
     align-items: center;
   }
 
-  .footer-content {
-    width: 50%;
+  footer ul img {
+    padding-top: 30px;
   }
 }
 
 /* || Large Devices */
-@media (min-width: 1200px) {
-  .tablet-bg {
-    display: none;
-  }
-
-  .desktop-bg {
-    display: block;
-    position: absolute;
-    height: 200%;
-    max-width: none;
-    top: -25%;
-    left: -19%;
-    z-index: -1;
-  }
-
-  .bg-pattern-1 {
-    height: 45%;
-  }
-
+@media (min-width: 1440px) {
   .logo {
-    padding-top: 75px;
-    padding-left: 100px;
-    margin: 0;
+    margin-top: 62px;
+    margin-left: 165px;
+    padding: 0px;
+  }
+  
+  .pattern-1 {
+    height: 312px;
+    top: -25px;
+    right: 0px;
   }
 
   main {
-    padding-top: 150px;
-    padding-left: 100px;
-    margin-bottom: 350px;
+    padding: 0px;
+    margin-left: 165px;
   }
-
+  
   main h1 {
     font-size: 88px;
     line-height: 88px;
-    max-width: 65%;
+    margin-top: 127px;
+    max-width: 1015px;
   }
 
   main p {
+    max-width: 825px;
     font-size: 20px;
     line-height: 34px;
-    max-width: 55%;
+    margin-bottom: 321px;
   }
 
-  /* .cta-card {
-    border-radius: 15px;
-    background: var(--orange);
-    color: var(--white);
-    padding: 60px 30px;
-    width: 38%;
-    position: absolute;
-    right: 10%;
-    top: 89%;
-  } */
-}
-
-@media (min-width: 1440px) {
-  footer img {
-    margin-right: 50px;
+  .cta {
+    width: 85%;
   }
 
-  .footer-content {
-    display: flex;
-    align-items: center;
+  .iphone-img {
+    height: 642px;
+    width: 312px;
+    top: -200px;
+    right: 54%;
+  }
+
+  .pattern-2 {
+    height: 468px;
+    width: 312px;
+    top: -30px;
+    left: -190px;
+  }
+
+  .cta-card {
+    right: 175px;
   }
 }
 
 /* || XL Devices */
-@media (min-width: 1800px) {
-  .desktop-bg {
-    height: 275%;
+@media (min-width: 1920px) {
+  .page-container {
+    max-width: 85%;
+    margin: 0 auto;
   }
 
-  .footer-content {
-    display: flex;
-    align-items: center;
-    width: 35%;
+  .pattern-1 {
+    height: auto;
+  }
+
+  .pattern-2 {
+    top: 76px;
+    left: -60px;
+  }
+
+  footer {
+    padding: 0px;
+    width: 85%;
+    margin: 202px auto 91px auto;
   }
 }
 

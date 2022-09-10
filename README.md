@@ -38,6 +38,7 @@ Users should be able to:
 - CSS Animations
 - Flexbox
 - Mobile-first workflow
+- JavaScript
 
 ## Author
 

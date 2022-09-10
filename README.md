@@ -43,3 +43,5 @@ Users should be able to:
 ## Author
 
 - Website - [Brenden Evans](https://www.brendenevans.com)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ba60647-4b45-483d-91ba-8cd877404c05/deploy-status)](https://app.netlify.com/sites/equalizer-landing-page-demo/deploys)
